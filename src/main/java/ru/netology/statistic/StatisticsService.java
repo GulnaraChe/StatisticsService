@@ -1,5 +1,7 @@
 package ru.netology.statistic;
 
+import java.util.Arrays;
+
 public class StatisticsService {
     public long findMax(long[] incomes) {
         long maxValue = incomes[0];
@@ -9,5 +11,15 @@ public class StatisticsService {
             }
         }
         return maxValue;
+    }
+
+    public void Main() {
+        long[] incomesInBillions = {};
+        StatisticsService service = new StatisticsService();
+        System.out.print("Доход в милионах по месяцам");
+        System.out.println(Arrays.toString(incomesInBillions));
+        long max = service.findMax(incomesInBillions);
+        System.out.print("Самое большое из всего:");
+        System.out.println(max);
     }
 }
